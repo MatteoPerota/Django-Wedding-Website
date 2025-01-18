@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            background: url('/static/images/BigWallpaper2.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.5rem;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #about {
+            background: #f9f9f9;
+        }
+        #gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        #rsvp form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #rsvp input, #rsvp textarea, #rsvp button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Martina & Matteo</h1>
+        <p>29-08-2025</p>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>[Write a short story about your journey together. How you met, your engagement, etc.]</p>
+    </section>
+
+    <section id="details">
+        <h2>Wedding Details</h2>
+        <p>When: [Wedding Date]</p>
+        <p>Where: [Venue Address]</p>
+        <p>Time: [Start Time]</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div>
+            <img src="/static/images/BigWallpaper2.jpg" alt="Photo 1">
+            <img src="/static/images/Limonaia.jpeg" alt="Photo 2">
+            <img src="/static/images/bosco.jpeg" alt="Photo 3">
+            <img src="/static/images/BigWallpaper2.jpg" alt="Photo 1">
+            <img src="/static/images/Limonaia.jpeg" alt="Photo 2">
+            <img src="/static/images/bosco.jpeg" alt="Photo 3">
+        </div>
+    </section>
+
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Message" rows="4"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Martina Pagnotta & Matteo Perota. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martina & Matteo's Wedding</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* General Section Styles */
+        section {
+            height: 100vh; /* Full screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Cover Page */
+        .cover {
+            height: 100vh;
+            background: url('/static/images/BigWallpaper2.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .cover-text {
+            text-align: center;
+            color: white;
+        }
+
+        .cover-text .names {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .cover-text .date {
+            font-size: 2em;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Head Banner */
+        .head-banner {
+            position: fixed;
+            top: 0.5cm;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 2cm;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .head-banner nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .head-banner nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .head-banner nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Location Section */
+        #location {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        .location-text-box {
+            flex: 1;
+            margin-right: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-text-box p {
+            margin: 0;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .timeline {
+            position: relative;
+            width: 50px;
+            height: 300px; /* Height of the timeline */
+            margin: 20px auto;
+            background: none;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: black;
+        }
+
+        .timeline-circle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: black;
+            border: 2px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-circle:hover,
+        .timeline-circle.active {
+            background: white;
+            color: black;
+        }
+
+        .timeline-circle:nth-child(1) { top: 0%; }
+        .timeline-circle:nth-child(2) { top: 33%; }
+        .timeline-circle:nth-child(3) { top: 66%; }
+        .timeline-circle:nth-child(4) { top: 100%; }
+
+        .location-image {
+            flex: 1;
+            margin-left: 20px;
+            height: 80%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover">
+        <div class="cover-text">
+            <p class="names">Martina & Matteo</p>
+            <p class="date">2025-08-29</p>
+        </div>
+    </div>
+
+    <!-- Head Banner -->
+    <div class="head-banner">
+        <nav>
+            <a href="#evento">Evento</a>
+            <a href="#location">Location</a>
+            <a href="#lista-nozze">Lista Nozze</a>
+            <a href="#rsvp" class="rsvp-button">RSVP</a>
+        </nav>
+    </div>
+
+    <!-- Event Section -->
+    <section id="evento">
+        <h2>Evento</h2>
+        <p>Details about the event go here...</p>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+        <div class="location-text-box">
+            <p>Il matrimonio si terrà alla tenuta Duodena nello spazio limonaia, la cerimonia avverrà in loco e sarà seguita da un banchetto di festeggiamento.</p>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-circle" data-image="/static/images/Limonaia.jpeg">1</div>
+                <div class="timeline-circle" data-image="/static/images/Aperitivo.jpeg">2</div>
+                <div class="timeline-circle" data-image="/static/images/Bosco.jpeg">3</div>
+                <div class="timeline-circle" data-image="/static/images/Limonaia.jpg">4</div>
+            </div>
+        </div>
+        <div class="location-image" id="location-image" style="background-image: url('/static/images/image1.jpg');"></div>
+    </section>
+
+    <!-- Lista Nozze Section -->
+    <section id="lista-nozze">
+        <h2>Lista Nozze</h2>
+        <p>Siamo fortunati di poter passare il giorno del nostro matrimonio con tutta la nostra famiglia e i nostri amici più cari. 
+            Questo per noi è veramente il regalo più importante. 
+            Nel caso vogliate festeggiare con un regalo, 
+            abbiamo creato un conto per risparmiare per l'anticipo per la nostra futura casa.
+            <br>Grazie
+            <br>IBTIDM20913034593804982
+        </p>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+        <h2>RSVP</h2>
+    </section>
+
+    <script>
+        const timelineCircles = document.querySelectorAll('.timeline-circle');
+        const locationImage = document.getElementById('location-image');
+
+        timelineCircles.forEach(circle => {
+            circle.addEventListener('click', () => {
+                timelineCircles.forEach(c => c.classList.remove('active'));
+                circle.classList.add('active');
+                locationImage.style.backgroundImage = `url(${circle.dataset.image})`;
+            });
+        });
+    </script>
+</body>
+</html>
