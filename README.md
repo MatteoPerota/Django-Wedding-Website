@@ -78,5 +78,5 @@ If you want to publish your website to let other people visit it, a viable way i
 
 Once the website is live, you can just take your url and convert it to QR code if you want to use it in your invites.
 
-## **That's all folks**
+## **That's all folks!**
 Thanks for checking out this project! If you have any questions or feedback, feel free to reach out. 😊
