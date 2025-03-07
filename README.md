@@ -63,11 +63,20 @@ The design is all about simplicity, elegance, and usability.
 ## **How to Run It**
 Want to check it out locally? Here’s how:  
 1. Clone the repo to your machine.  
-2. Make sure you have Django installed (`pip install django`).  
-3. Run the Django dev server:  
+2. Make sure you have Django installed (`pip install django`).
+3. Proceed to configure your Django project and repo.
+4. Run the Django dev server:  
    ```bash
    python manage.py runserver
    ```
-4. Open your browser and head to http://127.0.0.1:8000/ to see the site in action.
+5. Open your browser and head to http://127.0.0.1:8000/ to see the site in action.
+
+## **For the Real World**
+
+If you want to publish your website to let other people visit it, a viable way is to use cloud-based platforms that allows users to code, run, and host Python applications such as pythonanywhere.com.
+The procedure upload your code into the platform and publish your website is pretty straightforwards and there's tons of materials on youtube for you to follow.
+
+Once the website is live, you can just take your url and convert it to QR code if you want to use it in your invites.
+
 
 Thanks for checking out this project! If you have any questions or feedback, feel free to reach out. 😊
