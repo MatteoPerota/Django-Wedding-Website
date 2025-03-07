@@ -82,7 +82,7 @@ Once the website is live, you can just take your url and convert it to QR code i
 ---
 
 ## **This is how it looks like:**
-You might notice that everything is written in Italian—it’s my native language and the one most of our friends and family are comfortable with!
+You might notice that everything is written in Italian—it’s my native language and the one many of my friends and family are comfortable with!
 
 
 **Cover Page**:
