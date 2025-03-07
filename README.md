@@ -1,17 +1,17 @@
 # Wedding Website Project
 
 Hey there! 👋 Welcome to the repository for a Django wedding website I created for my wedding invites. 
-This project is a simple, clean, and user-friendly website designed to give guests all the info they need about the big day. Let me walk you through the design, features, and tech behind it!
+This project is a simple, clean, and user-friendly website designed to give guests all the info they need about the big day. 
 
 ---
 
 ## **What’s This All About?**
-This website is the go-to spot for wedding details like the schedule, location, FAQs, and RSVP. The goal? To create something beautiful, easy to use, and reflective of our style while making sure guests have a smooth experience.
+This website is supposed to be the go-to spot for wedding details like the schedule, location, questions, and RSVP. 
+The goal? To create something lean, easy to use, and reflective of the wedding style while making sure guests have a smooth experience.
 
 ---
 
 ## **Cool Features**
-Here’s what makes this website stand out:
 
 1. **Responsive Design**  
    - Works flawlessly on desktops, tablets, and phones.  
@@ -56,7 +56,7 @@ The design is all about simplicity, elegance, and usability.
 - **Colors**: Neutral tones (white, soft grays) let the content shine against the background.  
 - **Fonts**: A mix of serif (`Great Vibes`, `Cinzel Decorative`) and sans-serif (`Roboto`) fonts balances elegance with readability.  
 - **Spacing**: Plenty of whitespace and padding keep things clean and easy to navigate.  
-- **Mobile-First**: Designed with mobile users in mind, so it looks great on smaller screens.
+- **Mobile-First**: Designed with mobile users in mind, as most visitors will visit the website after scanning the QR code on the invites. It must look good on smaller screens.
 
 ---
 
