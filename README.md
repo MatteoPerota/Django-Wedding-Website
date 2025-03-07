@@ -98,4 +98,4 @@ Once the website is live, you can just take your url and convert it to QR code i
 </div>
 
 ## **That's all folks!**
-Thanks for checking out this project! If you have any questions or feedback, feel free to reach out. 😊
+Thanks for checking this out! If you have any questions or feedback, feel free to reach out. 😊
