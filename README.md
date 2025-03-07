@@ -4,7 +4,7 @@ Hey there! 👋 Welcome to the repository for a Django wedding website I created
 This project is a simple, clean, and user-friendly website designed to give guests all the info they need about the big day. 
 
 <div style="width: 100%; height: 300px; overflow-y: auto;">
-  <img src="https://via.placeholder.com/300x2000" alt="Tall and Thin Image" style="width: 100%; height: auto;">
+  <img src="webpage_scroll.jpg" alt="Tall and Thin Image" style="width: 100%; height: auto;">
 </div>
 
 ---
