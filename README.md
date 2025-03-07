@@ -3,10 +3,6 @@
 Hey there! 👋 Welcome to the repository for a Django wedding website I created for my wedding invites. 
 This project is a simple, clean, and user-friendly website designed to give guests all the info they need about the big day. 
 
-<div style="width: 100%; height: 300px; overflow-y: auto;">
-  <img src="webpage_scroll.jpg" alt="Tall and Thin Image" style="width: 100%; height: auto;">
-</div>
-
 ---
 
 ## **What’s This All About?**
@@ -82,6 +78,14 @@ If you want to publish your website to let other people visit it, a viable way i
 <br>The procedure upload your code into the platform and publish your website is pretty straightforward and there's tons of materials on youtube for you to follow.
 
 Once the website is live, you can just take your url and convert it to QR code if you want to use it in your invites.
+
+---
+
+## **This is how it looks like:**
+
+<div style="width: 100%; height: 300px; overflow-y: auto;">
+  <img src="webpage_scroll.jpg" alt="Tall and Thin Image" style="width: 100%; height: auto;">
+</div>
 
 ## **That's all folks!**
 Thanks for checking out this project! If you have any questions or feedback, feel free to reach out. 😊
