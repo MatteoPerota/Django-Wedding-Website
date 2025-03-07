@@ -1,7 +1,9 @@
 # Django Wedding Website
 
 Hey there! 👋 Welcome to the repository for a Django wedding website I created for my wedding invites. 
-This project is a simple, clean, and user-friendly website designed to give guests all the info they need about the big day. 
+This project is a simple, clean, and user-friendly website designed to give guests all the info they need about the big day.
+
+You might notice that everything is written in Italian—it’s my native language and the one most of our friends and family are comfortable with!
 
 ---
 
