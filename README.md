@@ -33,7 +33,8 @@ The goal? To create something lean, easy to use, and reflective of the wedding s
    - Smooth transitions and icons make it fun to use.
 
 6. **RSVP Form**  
-   - A clean form lets guests RSVP, choose their attendance level, and add notes (like dietary needs).  
+   - A clean form lets guests RSVP, choose their attendance level, and add notes (like dietary needs).
+   - Feedback is collected and sent over email to a dedicated email address I created to track RSVP.
    - Custom radio buttons and inputs keep everything looking consistent.
 
 7. **Copy-to-Clipboard Feature**  
