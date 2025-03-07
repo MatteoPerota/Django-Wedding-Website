@@ -3,6 +3,8 @@
 Hey there! 👋 Welcome to the repository for a Django wedding website I created for my wedding invites. 
 This project is a simple, clean, and user-friendly website designed to give guests all the info they need about the big day.
 
+Web design isn’t exactly my specialty (I spend most of my time working with data), but I figured this could be a handy resource for fellow improvised designers who find themselves in a similar situation!
+
 ---
 
 ## **What’s This All About?**
