@@ -74,7 +74,7 @@ Want to check it out locally? Here’s how:
 ## **For the Real World**
 
 If you want to publish your website to let other people visit it, a viable way is to use cloud-based platforms that allows users to code, run, and host Python applications such as pythonanywhere.com.
-The procedure upload your code into the platform and publish your website is pretty straightforwards and there's tons of materials on youtube for you to follow.
+The procedure upload your code into the platform and publish your website is pretty straightforward and there's tons of materials on youtube for you to follow.
 
 Once the website is live, you can just take your url and convert it to QR code if you want to use it in your invites.
 
