@@ -1,34 +1,73 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Martina & Matteo Wedding</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
             color: #333;
+            position: relative;
+            overflow-x: hidden;
         }
+
+        /* Background Image Fix for iOS */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('static/images/BigWallpaper2.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            body::before {
+                background-image: url('static/images/Background_M.jpg');
+            }
+        }
+
+        /* Header Styles */
         header {
             text-align: center;
-            background: url('/static/images/BigWallpaper2.jpg') no-repeat center center/cover;
+            background: transparent;
             color: white;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding-top: 200px; /* Move the header down */
         }
+
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-family: 'Great Vibes', cursive; /* Handwritten font */
+            font-size: 2rem; /* Larger size for elegance */
             margin: 0;
+            font-weight: normal;
+            line-height: 1.2;
         }
+
         header p {
-            font-size: 1.5rem;
+            font-family: 'Cinzel Decorative', serif; /* Art Deco font */
+            font-size: 1rem; /* Slightly larger */
+            margin-top: 10px;
+            font-weight: 400;
+            letter-spacing: 2px; /* Add spacing for elegance */
         }
+
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -37,104 +76,548 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
+
         nav ul {
-            margin: 0;
+            margin: 10;
             padding: 0;
             list-style: none;
             display: flex;
             justify-content: center;
         }
+
         nav ul li {
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
         }
+
+        /* Sections */
         section {
             padding: 60px 20px;
             text-align: center;
-        }
-        #about {
-            background: #f9f9f9;
-        }
-        #gallery img {
-            width: 100%;
-            max-width: 300px;
-            margin: 10px;
+            background: rgba(249, 249, 249, 0.85);
+            margin: 20px auto;
+            max-width: 1200px;
+            box-sizing: border-box;
             border-radius: 8px;
+            position: relative;
+            z-index: 1;
         }
+
+        #Evento {
+            background: rgba(249, 249, 249, 0.85);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: #9aab89;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item.left {
+            justify-content: flex-end;
+            padding-right: 0%;
+        }
+
+        .timeline-item.right {
+            justify-content: flex-start;
+            padding-left: 0%;
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background-color: #5f80bb;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 0 2px #5f80bb;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 40%;
+        }
+
+        .timeline-content h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .timeline-content p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+            color: #555;
+            font-weight: bold;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            section {
+                width: calc(100% - 20px); /* Ensure equal margins on both sides */
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .timeline {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+
+            .timeline::before {
+                left: 20px;
+                transform: none;
+            }
+
+            .timeline-item {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom: 20px;
+            }
+
+            .timeline-item.left,
+            .timeline-item.right {
+                padding: 0 0 0 40px;
+                justify-content: flex-start;
+            }
+
+            .timeline-dot {
+                left: -9.5px;
+                transform: none;
+                margin-right: 10px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 70px);
+                text-align: left;
+                margin: 0;
+            }
+
+            /* RSVP Form Adjustments for Mobile */
+            #rsvp form {
+                padding: 0 10px; /* Add padding to center the form */
+            }
+
+            #rsvp input,
+            #rsvp textarea,
+            #rsvp button {
+                width: 100%;
+                margin: 10px 0;
+                padding: 10px;
+                font-size: 1rem;
+                box-sizing: border-box; /* Ensure padding is included in width */
+            }
+        }
+
+        /* Location Section */
+        .location-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .location-text {
+            flex: 1 1 300px;
+            padding: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .slideshow-container {
+            flex: 1 1 300px;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            min-height: 300px;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .slideshow-container button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            color: transparent;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .slideshow-container .prev {
+            left: 10px;
+        }
+
+        .slideshow-container .next {
+            right: 10px;
+        }
+
+        /* RSVP Section */
         #rsvp form {
             max-width: 600px;
             margin: 0 auto;
             text-align: left;
         }
-        #rsvp input, #rsvp textarea, #rsvp button {
+
+        #rsvp input,
+        #rsvp textarea,
+        #rsvp button {
             width: 100%;
             margin: 10px 0;
             padding: 10px;
             font-size: 1rem;
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
+
+        .attendance-options {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align radio buttons vertically */
+        }
+
+        .radio-container {
+            display: flex;
+            align-items: center; /* Align radio button and text */
+            margin-bottom: 10px; /* Space between options */
+        }
+
+        /* Custom Radio Button */
+        .radio-container input[type="radio"] {
+            display: none; /* Hide the default radio button */
+        }
+
+        .radio-container .custom-radio {
+            width: 16px; /* Size of the custom radio button */
+            height: 16px; /* Size of the custom radio button */
+            border: 2px solid #333; /* Border color */
+            border-radius: 4px; /* Slightly rounded corners */
+            margin-right: 8px; /* Space between radio button and text */
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0; /* Prevent the radio button from shrinking */
+        }
+
+        .radio-container .custom-radio::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px; /* Inner square size */
+            height: 8px; /* Inner square size */
+            background-color: #333; /* Inner square color */
+            border-radius: 2px; /* Slightly rounded corners for inner square */
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.2s ease; /* Smooth transition */
+        }
+
+        .radio-container input[type="radio"]:checked + .custom-radio::before {
+            opacity: 1; /* Show inner square when checked */
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px; /* Space for the icon */
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .faq-item h3 .arrow {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item h3.collapsed .arrow {
+            transform: translateY(-50%) rotate(0deg); /* Start with chevron pointing right */
+        }
+
+        .faq-item h3:not(.collapsed) .arrow {
+            transform: translateY(-50%) rotate(90deg); /* Rotate chevron downward when expanded */
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            display: none; /* Hidden by default */
+        }
+
+        /* Footer */
         footer {
             background: #333;
             color: white;
             text-align: center;
             padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#details">Details</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#Evento">Programma</a></li>
+            <li><a href="#Location">Location</a></li>
+            <li><a href="#ListaNozze">FAQ</a></li>
             <li><a href="#rsvp">RSVP</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1>Martina & Matteo</h1>
+        <h1>Martina              &                 Matteo</h1>
         <p>29-08-2025</p>
     </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>[Write a short story about your journey together. How you met, your engagement, etc.]</p>
-    </section>
-
-    <section id="details">
-        <h2>Wedding Details</h2>
-        <p>When: [Wedding Date]</p>
-        <p>Where: [Venue Address]</p>
-        <p>Time: [Start Time]</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div>
-            <img src="/static/images/BigWallpaper2.jpg" alt="Photo 1">
-            <img src="/static/images/Limonaia.jpeg" alt="Photo 2">
-            <img src="/static/images/bosco.jpeg" alt="Photo 3">
-            <img src="/static/images/BigWallpaper2.jpg" alt="Photo 1">
-            <img src="/static/images/Limonaia.jpeg" alt="Photo 2">
-            <img src="/static/images/bosco.jpeg" alt="Photo 3">
+    <section id="Evento">
+        <h2>Il Matrimonio</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Accoglienza</h3>
+                    <p>17:00 - 17:30</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Cerimonia</h3>
+                    <p>17:30 - 18:00</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Aperitivo e Cena</h3>
+                    <p>18:00 - 20:00</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Taglio torta e Festeggiamenti</h3>
+                    <p>21:00</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <section id="Location">
+        <h2>La Location</h2>
+        <div class="location-container">
+            <div class="location-text">
+                <p>
+                    Il matrimonio si svolgerà presso Diodona, spazio Limonaia a Malnate (VA).
+                    Si tratta di una serra e adiacenti giardini, adibiti a sala da pranzo per eventi.
+                    <br>La cerimonia si svolgerà presso l'adiacente bosco del Roccolo, che si raggiunge tramite una breve salita sterrata.
+                    <br>Saranno disponibili golf cart per chiunque non se la senta di camminare.
+                    <br><br>
+                    Per maggiori informazioni sullo spazio Diodona: <br>
+                    <a href="https://www.diodona.it/limonaia-location-matrimoni/" target="_blank">Limonaia Diodona - Spazio e Ristorante</a>
+                </p>
+            </div>
+            <div class="slideshow-container">
+                <img class="slide" src="{% static 'images/Limonaia.jpeg' %}" alt="Location Image 1" loading="lazy">
+                <img class="slide" src="{% static 'images/bosco.jpeg' %}" alt="Location Image 2" loading="lazy">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="ListaNozze">
+        <h2>Informazioni Utili</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(1)"><span class="arrow"><i class="fas fa-chevron-right"></i></span>Dove posso parcheggiare?</h3>
+                <p id="faq-content-1">Ci sono ampi parcheggi disponibili presso la location. Seguite le indicazioni all'ingresso per raggiungere l'area parcheggio dedicata.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(2)"><span class="arrow"><i class="fas fa-chevron-right"></i></span>Come posso comunicare eventuali allergie alimentari?</h3>
+                <p id="faq-content-2"> Potete indicare eventuali allergie o intolleranze alimentari nel modulo RSVP. Ci assicureremo che il catering soddisfi tutte le esigenze.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(3)"><span class="arrow"><i class="fas fa-chevron-right"></i></span>C'è una lista nozze?</h3>
+                <p id="faq-content-3">
+                    Questa magari l'avete già sentita, ma il regalo più grande per noi sarà la vostra presenza nel nostro giorno speciale e nelle nostre vite.
+                    <br><br>
+                    Se però desiderate contribuire al nostro sogno di comprare casa, a seguito trovate il nostro IBAN:
+                    <br><br>
+                    <strong id="iban" onclick="copyToClipboard()" style="cursor: pointer; text-decoration: underline;">IT24R0623001614000015392250</strong>
+                    <br><br>
+                    Grazie di cuore.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const header = content.previousElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                header.classList.remove("collapsed");
+            } else {
+                content.style.display = "none";
+                header.classList.add("collapsed");
+            }
+        }
+
+        // Hide all FAQ content initially
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqContents = document.querySelectorAll(".faq-item p");
+            const faqHeaders = document.querySelectorAll(".faq-item h3");
+            faqContents.forEach(content => {
+                content.style.display = "none";
+            });
+            faqHeaders.forEach(header => {
+                header.classList.add("collapsed"); // Start with arrows rotated
+            });
+        });
+        // Function to copy IBAN to clipboard
+        function copyToClipboard() {
+            const iban = document.getElementById("iban").innerText;
+            navigator.clipboard.writeText(iban).then(() => {
+                alert("IBAN copiato negli appunti!");
+            }).catch(() => {
+                alert("Errore durante la copia dell'IBAN. Riprova.");
+            });
+        }
+
+        // Hide all FAQ content initially
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqContents = document.querySelectorAll(".faq-item p");
+            faqContents.forEach(content => {
+                content.style.display = "none";
+            });
+        });
+    </script>
+
     <section id="rsvp">
         <h2>RSVP</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Message" rows="4"></textarea>
-            <button type="submit">Submit</button>
+        <form action="{% url 'rsvp' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Il tuo nome" required>
+            <input type="email" name="email" placeholder="La tua email" required>
+            <p>Seleziona la tua partecipazione:</p>
+            <div class="attendance-options">
+                <div class="radio-container">
+                    <input type="radio" name="attendance" value="Verrò per l'intera durata dell'evento" aria-label="Verrò per l'intera durata dell'evento" id="attendance2">
+                    <label for="attendance2" class="custom-radio"></label>
+                    <label for="attendance2">Verrò per l'intera durata dell'evento</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" name="attendance" value="Verrò solo per il taglio della torta" required aria-label="Verrò solo per il taglio della torta" id="attendance1">
+                    <label for="attendance1" class="custom-radio"></label>
+                    <label for="attendance1">Verrò solo per il taglio della torta</label>
+                </div>
+            </div>
+            <textarea name="message" placeholder="Puoi usare questo spazio per indicarci allergie, diete, intolleranze, o anche semplicemente per mandarci un augurio" rows="4"></textarea>
+            <button type="submit">Invia</button>
         </form>
     </section>
 
     <footer>
         <p>&copy; 2025 Martina Pagnotta & Matteo Perota. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 10000);
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            if (slideIndex < 1) { slideIndex = slides.length; }
+            showSlides();
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            showSlides();
+        }
+
+        showSlides();
+    </script>
 </body>
 </html>
