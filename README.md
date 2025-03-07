@@ -91,7 +91,7 @@ Once the website is live, you can just take your url and convert it to QR code i
 </div>
 
 
-
+<br><br>
 **Scrolling Section**
 <div style="width: 100%; height: 300px; overflow-y: auto;">
   <img src="webpage_scroll.jpg" alt="Tall and Thin Image" style="width: 100%; height: auto;">
